@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset134 PingFangSC-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red92\green38\blue153;\red196\green26\blue22;
+\red28\green0\blue207;\red46\green13\blue110;\red38\green71\blue75;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13560\viewh8400\viewkind0
+\deftab529
+\pard\tx529\pardeftab529\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 		String | Character | Unicode\
+		\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+		\
+		let\cf0  str: \cf3 NSString\cf0  = \cf4 "
+\f1 \cf4 \uc0\u59820 
+\f0 \cf4 $A+=z
+\f2 \'a5\'d3\'a5\'c6\uc0\u12163 \'b7\'d6\'a4\'ce\'a5\'a2
+\f0 "\cf0 \
+        \cf2 var\cf0  i: \cf3 Int\cf0  = \cf5 0\cf0 \
+        \
+        \cf2 while\cf0  i < str.\cf3 length\cf0  \{\
+            \cf2 let\cf0  uCh: \cf3 unichar\cf0  = str.\cf6 characterAtIndex\cf0 (i)\
+            \cf2 let\cf0  hexCh_x: \cf3 NSString\cf0  = \cf3 NSString\cf0 (format: \cf4 "%x"\cf0 , uCh)\
+            \cf2 let\cf0  hexCh_X: \cf3 NSString\cf0  = \cf3 NSString\cf0 (format: \cf4 "%X"\cf0 , uCh)\
+            \cf2 let\cf0  strFromUnichar: \cf3 String\cf0  = \cf3 String\cf0 (\cf3 UnicodeScalar\cf0 (uCh))\
+            \cf2 let\cf0  ch: \cf3 Character\cf0  = \cf3 Character\cf0 (\cf3 UnicodeScalar\cf0 (uCh))\
+            \cf7 CLog\cf0 (\cf4 "hexCh_x: %@ \\t hexCh_X: %@ \\t strFromUnichar: %@ \\t Character: %@"\cf0 ,\
+                 hexCh_x, hexCh_X, strFromUnichar, \cf3 String\cf0 (ch))\
+            \
+            i += \cf5 1\cf0 \
+        \}\
+\
+}
